@@ -1,6 +1,0 @@
-Hola, estamos haciendo una prueba de streaming para los partidos y estas son tus credenciales para acceder a https://favirguezc.com/
-
-usuario: favirguezc
-contraseña: DzG%*Oab
-
-Por ahora no estamos trasmitiendo, pero esta semana estaremos haciendo las primeras pruebas, entonces te estaremos avisando para que ingreses.
