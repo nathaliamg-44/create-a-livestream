@@ -1,0 +1,56 @@
+Links de instalación
+https://www.servermania.com/kb/articles/nginx-rtmp/
+https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-20-04-es
+https://computernewage.com/2019/03/09/scripting-linux-bash-ejecutar-script-arranque/
+---------------------------------------------------------------
+*nginx+rtmp
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install -y git build-essential ffmpeg libpcre3 libpcre3-dev libssl-dev zlib1g-dev
+sudo git clone https://github.com/sergey-dryabzhinsky/nginx-rtmp-module.git
+sudo  wget http://nginx.org/download/nginx-1.17.6.tar.gz
+sudo tar -xf nginx-1.17.6.tar.gz
+cd nginx-1.17
+sudo ./configure --prefix=/usr/local/nginx --with-http_ssl_module --add-module=../nginx-rtmp-module
+sudo make -j 1
+sudo make install
+            --Configurar 
+sudo rm /usr/local/nginx/conf/nginx.conf
+sudo nano /usr/local/nginx/conf/nginx.conf
+            -- Inicializar
+sudo /usr/local/nginx/sbin/nginx
+
+*apache
+sudo apt-get update
+sudo apt install apache2
+sudo systemctl restart apache2
+
+*SSL Certicate
+sudo snap install core
+sudo snap refresh core 
+sudo snap install --classic certbot
+sudo ln -s /snap/bin/certbot /usr/bin/certbot
+sudo certbot --apache
+
+*PHP
+sudo apt update
+sudo apt install -y php
+
+---------------------------------------------------------------
+# nano /usr/local/nginx/conf/nginx.conf
+# start nginx /usr/local/nginx/sbin/ginx
+# dar acceso de lectura, escritura y chmod -R 777 /etc/apache2/sites-available/
+# reiniciar Apache sudo systemctl restart apache2
+------------------------------------------------------
+sudo -i
+cd /
+mkdir tmp
+cd tmp
+mkdir nginx
+cd nginx
+mkdir livestream
+cd ..
+cd ..
+cd ..
+/usr/local/nginx/sbin/ginx
+
